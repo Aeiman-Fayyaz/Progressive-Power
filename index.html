@@ -14,89 +14,284 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Multi-Couresel Links -->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!-- Main header Start -->
-    <div class="wrapper">
-        <div>
-            <header>
-                <div class="main-nav bg-black px-5 py-4">
-                    <div class="container mb-5">
-                        <div class="row align-items-center">
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <img src="https://www.progressivepower.com.pk/wp-content/uploads/2016/10/logo-2.png"
-                                    alt="Progressive Power" style="height: 52px;">
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <div class="text-white float-end">Call Now:
-                                    <span class="text-danger">+92-21-34322307-8</span>
-                                </div>
-                                <div class="text-white  float-end">Email:
-                                    <span class="text-danger">info@progressivepower.com.pk</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 pt-4">
-                                <div class="text-sm-center">
-                                    <ul class="list-unstyled d-flex justify-content-center gap-3 ">
-                                        <li>
-                                            <a href="./index.html" target="_blank" class="text-decoration-none">
-                                                <i class="fa-brands fa-square-facebook icon"
-                                                    style="color: #ffffff;"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./index.html" target="_blank" class="text-decoration-none">
-                                                <i class="fa-brands fa-square-twitter icon" style="color: #ffffff;"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./index.html" target="_blank" class="text-decoration-none">
-                                                <i class="fa-brands fa-linkedin icon" style="color: #ffffff;"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <nav class="main-nav navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <img src="https://www.progressivepower.com.pk/wp-content/uploads/2016/10/logo-2.png"
+                    alt="Progressive Power" style="height: 52px;">
+            </div>
+
+            <!-- Contact Info - Visible on desktop -->
+            <div class="contact-info d-none d-lg-flex align-items-center gap-3">
+                <div class="text-white float-end">Call Now:
+                    <span class="text-danger">+92-21-34322307-8</span>
                 </div>
-            </header>
-        </div>
-        <!-- Main header End -->
+                <div class="text-white  float-end">Email:
+                    <span class="text-danger">info@progressivepower.com.pk</span>
+                </div>
+            </div>
 
-
-        <!-- Mini Header Start -->
-        <div class="container bg-danger" style="background-size: auto 150px !important; background-position: 50% -90px !important;">
-            <div class="mini-header">
-                <ul class="list-unstyled d-flex gap-4">
+            <!-- Social Links - Visible on desktop -->
+            <div class="social-links d-none d-lg-flex align-items-center pt-3">
+                <ul class="list-unstyled d-flex justify-content-center gap-3">
                     <li>
-                        <a href="" class="text-decoration-none" style="color: red;">HOME</a>
+                        <a href="./index.html" target="_blank" class="text-decoration-none">
+                            <i class="fa-brands fa-square-facebook icon" style="color: #ffffff;"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="" class="text-decoration-none">ABOUT US</a>
+                        <a href="./index.html" target="_blank" class="text-decoration-none">
+                            <i class="fa-brands fa-square-twitter icon" style="color: #ffffff;"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="" class="text-decoration-none">PPG DOMAIN</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-decoration-none">FIELD OF EXPERTISE</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-decoration-none">ENIGINEERING SERVICES</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-decoration-none">CONTACT US</a>
+                        <a href="./index.html" target="_blank" class="text-decoration-none">
+                            <i class="fa-brands fa-linkedin icon" style="color: #ffffff;"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn d-lg-none" type="button" id="mobileMenuButton">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu - Hidden by default -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <div class="py-2">
+                <div class="text-white float-end">Call Now:
+                    <span class="text-danger">+92-21-34322307-8</span>
+                </div>
+                <div class="text-white  float-end">Email:
+                    <span class="text-danger">info@progressivepower.com.pk</span>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <ul class="list-unstyled d-flex justify-content-center gap-3">
+                        <li>
+                            <a href="./index.html" target="_blank" class="text-decoration-none">
+                                <i class="fa-brands fa-square-facebook icon" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./index.html" target="_blank" class="text-decoration-none">
+                                <i class="fa-brands fa-square-twitter icon" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./index.html" target="_blank" class="text-decoration-none">
+                                <i class="fa-brands fa-linkedin icon" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">PPG Domain</a>
+                <a href="#" class="nav-link">Field of Experience</a>
+                <a href="#" class="nav-link">Engineering Services</a>
+                <a href="#" class="nav-link">Contact Us</a>
+            </div>
         </div>
     </div>
-    <!-- Mini Header End -->
+
+    <!-- Mini Navigation Bar -->
+    <nav class="mini-nav navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Desktop Menu - Visible on large screens -->
+            <div class="desktop-menu d-none d-lg-flex justify-content-center w-100">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">PPG Domain</a>
+                <a href="#" class="nav-link">Field of Experience</a>
+                <a href="#" class="nav-link">Engineering Services</a>
+                <a href="#" class="nav-link">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Main header End -->
+
+    <!-- Hero Section Start -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+            <div class="col-lg-6">
+                <h3 class="lh-1 mb-3 mt-4">OUR CUSTOMERS</h3>
+                <p>PPG is providing Engineering Services and we are moving ahead with customers requirement on priority
+                    basis.</p>
+                <!-- Carousel -->
+                <section class=" pb-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2016/10/gover_org-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">GOV. ORGANIZATIONS</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2016/10/bank-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">BANKING</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2016/10/walefare_org-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">WELFARE</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2015/02/pharma-1-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">PHARMA COMPANIES</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2015/02/hospital-1-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">HOSPITALS</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2015/02/fertilizer-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">FERTILIZERS</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2015/02/hotels-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">HOTELS</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2015/02/dewan_auto-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">DEWAN AUTOMOTIVE</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div>
+                                                        <img class="img-fluid" alt="100%x280"
+                                                            src="https://www.progressivepower.com.pk/wp-content/uploads/2015/02/textile-1-150x150_c.jpg">
+                                                        <div class="card-body">
+                                                            <h5 class="carousel-heading">TEXTILE INDUSTRIES</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a class="btn carousel-btn mb-3 mr-1" href="#carouselExampleIndicators2" role="button"
+                                    data-slide="prev">
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <a class="btn carousel-btn mb-3" href="#carouselExampleIndicators2" role="button"
+                                    data-slide="next">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-6 flex-sm-row-reverse">
+                <h3 class="lh-1">ABOUT US PROGRESSIVE POWER</h3>
+                <p class="lh-lg">PPG is a Power Engineering Services Company (Cummins/ CAT & Power GenTeam), Registered
+                    with SECP with a Mission to provide complete Sales and Service solution to our Valued
+                    Customers
+                    segment wise from Home, Commercial to Industries, Power Plants, Hospitals, Hotels, Telecom,
+                    Banking
+                    Sectors, Cement Sector, Marine, Automotive, Industrial, Oil & Gas Sector, Locomotive etc.
+                </p>
+                <p>We deal in Sales, Parts and After Market Support of new & refurbished equipment’s supported
+                    by
+                    well-equipped workshop, special tools, warehouse facilities and our dedicated & trained
+                    Cummins
+                    team
+                    all over Pakistan.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="./index.html" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="btn btn-lg  me-md-2">More Information</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Section End -->
 
 
 
-    <script src="app.js"></script>
+
+
+
+
+
+
+        <!-- Our JavaScript -->
+        <script src="app.js"></script>
+
+
+        <!-- JavaScript dependencies Carousel-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script type="text/javascript"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
