@@ -17,7 +17,7 @@
     --primary-color: #000000;
     --secondary-color: #FFFFFF;
     --accent-color: #af2424;
-    --hover-color: #af2424 ;
+    --hover-color: #af2424;
 }
 
 body {
@@ -30,6 +30,7 @@ body {
     color: var(--secondary-color);
     padding: 0.5rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .logo {
@@ -69,7 +70,21 @@ body {
 .mini-nav {
     background-color: var(--secondary-color);
     padding: 0.8rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    filter: drop-shadow(3px 8px 14px #00000054) !important;
+}
+
+.sticky-header {
+    max-height: 300px;
+    overflow: visible;
+    z-index: 99;
+    visibility: visible;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-opacity: 1;
+    opacity: 1;
+    top: 0;
+    display: block;
+    backface-visibility: hidden;
 }
 
 .nav-link {
@@ -112,7 +127,6 @@ body {
     width: 100%;
 }
 
-/* Mobile Menu */
 .mobile-menu-btn {
     color: var(--secondary-color);
     font-size: 1.5rem;
@@ -141,29 +155,6 @@ body {
     color: var(--hover-color);
 }
 
-@media (max-width: 991.98px) {
-    .contact-info .contact-item {
-        margin-right: 1rem;
-    }
-
-    .nav-link {
-        margin: 0 0.5rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-
-    .main-nav .contact-info,
-    .main-nav .social-links,
-    .mini-nav .desktop-menu {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-}
-
 .icon {
     font-size: 26px;
 }
@@ -178,15 +169,17 @@ body {
     height: 60px !important;
     font-size: 18px !important;
     font-weight: 800 !important;
+    outline: 0 !important;
 }
 
 .btn:hover {
     background-color: #af2424 !important;
-    border: 3px solid #af2424 !important;
+    outline: 0 !important;
     color: rgb(225, 225, 225) !important;
     height: 60px !important;
     font-size: 18px !important;
     font-weight: 800 !important;
+    transition: all 0.5s ease;
 }
 
 .carousel-heading {
@@ -211,4 +204,104 @@ h2,
 h3,
 h4 {
     font-family: Roboto-black !important;
+}
+
+.center-sec {
+    height: 550px;
+    background-color: #c6c6c6;
+    color: #af2424;
+}
+
+.center-sec p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.contact-btn {
+    font-size: 16px;
+    height: 50px;
+    width: 200px;
+    background-color: #af2424;
+    color: aliceblue;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-btn:hover {
+    font-size: 16px;
+    height: 50px;
+    width: 200px;
+    color: #af2424;
+    background-color: aliceblue;
+    letter-spacing: 2px;
+    border: 2px solid #af2424;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.detail-btn {
+    font-size: 14px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    width: 200px;
+    background-color: #af2424;
+    color: aliceblue;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+}
+
+.detail-btn:hover {
+    font-size: 14px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    width: 200px;
+    color: #af2424;
+    background-color: aliceblue;
+    letter-spacing: 2px;
+    border: 2px solid #af2424;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+footer{
+    color: #c6c6c6;
+    font-size: 18px !important;
+}
+.copyright{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Media QUuery for mobile navigation bar */
+@media (max-width: 991.98px) {
+    .contact-info .contact-item {
+        margin-right: 1rem;
+    }
+    .nav-link {
+        margin: 0 0.5rem;
+    }
+    .center-sec p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .mini-img {
+        width: 190%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .main-nav .contact-info,
+    .main-nav .social-links,
+    .mini-nav .desktop-menu {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+    .center-sec p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .mini-img {
+        width: 120%;
+    }
 }
