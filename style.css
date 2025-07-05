@@ -288,6 +288,13 @@ footer{
 .border-btm{
     border-bottom: 5px solid #af2424 !important;
 }
+.para{
+    font-family: roboto-black;
+    font-weight: 800;
+}
+.service-li{
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* Media QUuery for mobile navigation bar */
 @media (max-width: 991.98px) {
     .contact-info .contact-item {
